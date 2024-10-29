@@ -1,38 +1,71 @@
-// This is the boilerplate code given for you
-// You can modify this code
-// Product data
-const products = [
-  { id: 1, name: "Product 1", price: 10 },
-  { id: 2, name: "Product 2", price: 20 },
-  { id: 3, name: "Product 3", price: 30 },
-  { id: 4, name: "Product 4", price: 40 },
-  { id: 5, name: "Product 5", price: 50 },
-];
-
-// DOM elements
-const productList = document.getElementById("product-list");
-
-// Render product list
-function renderProducts() {
-  products.forEach((product) => {
-    const li = document.createElement("li");
-    li.innerHTML = `${product.name} - $${product.price} <button class="add-to-cart-btn" data-id="${product.id}">Add to Cart</button>`;
-    productList.appendChild(li);
-  });
+// This is the boilerplate code given for 
+/*  your css code here. If applicable */
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
 }
 
-// Render cart list
-function renderCart() {}
+h1,
+h2 {
+  color: #333;
+}
 
-// Add item to cart
-function addToCart(productId) {}
+ul {
+  list-style-type: none;
+  padding: 0;
+}
 
-// Remove item from cart
-function removeFromCart(productId) {}
+.product-item,
+.cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #ddd;
+}
 
-// Clear cart
-function clearCart() {}
+.product-name,
+.cart-product-name {
+  flex: 1;
+}
 
-// Initial render
-renderProducts();
-renderCart();
+.product-price,
+.cart-product-price,
+.cart-product-quantity,
+.cart-product-total {
+  width: 80px;
+  text-align: right;
+}
+
+.add-to-cart-btn,
+.remove-from-cart-btn,
+#clear-cart-btn {
+  padding: 5px 10px;
+  margin-left: 10px;
+  border: none;
+  background-color: #28a745;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.remove-from-cart-btn {
+  background-color: #dc3545;
+}
+
+.add-to-cart-btn:hover,
+.remove-from-cart-btn:hover,
+#clear-cart-btn:hover {
+  opacity: 0.8;
+}
+
+.cart-total {
+  font-size: 1.2em;
+  text-align: right;
+  margin-top: 10px;
+}
+
+#clear-cart-btn {
+  margin-top: 10px;
+  background-color: #ffc107;
+}
